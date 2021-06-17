@@ -1,0 +1,13 @@
+---
+- name: Creating a POD using Ansible
+  community.kubernetes.k8s:
+   api_version: v1
+   definition:
+    kind: Pod
+    metadata:
+     name: "{{ pod_name }}"
+     namespace: "{{ ns }}"
+    spec:
+     containers:
+      - name: "{{ pod_name }}"
+        image: nginx
