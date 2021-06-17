@@ -1,0 +1,10 @@
+---
+- name: Name
+  hosts: localhost
+  collections:
+   - community.kubernetes.k8s
+  roles:
+   - ns
+   - pod
+  environment:
+   KUBECONFIG: /home/ansible/.kube/config
