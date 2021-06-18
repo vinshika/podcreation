@@ -8,6 +8,8 @@
    - name: pod_name
      prompt: "Enter the Pod Name"
      private: no
+  collections:
+   - community.kubernetes.k8s
   roles:
    - namespace
    - pod
