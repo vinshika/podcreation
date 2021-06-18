@@ -1,6 +1,13 @@
 ---
 - name: Name
   hosts: all
+  vars_prompt:
+   - name: ns
+     prompt: "Enter the name space"
+     private: no
+   - name: pod_name
+     prompt: "Enter the Pod Name"
+     private: no
   roles:
    - namespace
    - pod
